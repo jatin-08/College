@@ -2,5 +2,4 @@
 
 require "../private/core/autoload.php";
 
-
 ?>
