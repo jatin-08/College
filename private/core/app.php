@@ -16,12 +16,12 @@ class App
 
         $URL = $this->getURL();
 
-        if (file_exists("../private/controller/" . $URL[0] . ".php")) {
+        if (file_exists(CONTROLLER . ucfirst($URL[0]) . ".php")) {
             $this->controller = ucfirst($URL[0]);
             unset($URL[0]);
         }
 
-        require("../private/controller/" . $this->controller . ".php");
+        require CONTROLLER . $this->controller . ".php";
         $this->controller = new $this->controller();
 
 
@@ -32,8 +32,8 @@ class App
             }
         }
 
-            $URL = array_values($URL);
-            $this->params = $URL;
+        $URL = array_values($URL);
+        $this->params = $URL;
 
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
