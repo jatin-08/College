@@ -14,7 +14,7 @@ define("BASE", "http://localhost/College/public/");
 
 ////////////////////////////////
 
-define("ASSEST", "http://localhost/College/public/assest");
+define("ASSEST", "http://localhost/College/public/assest/");
 
 ////////////////////////////////
 
