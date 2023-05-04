@@ -3,12 +3,12 @@
 <?php 
 
 $this->view("includes/header");
+$this->view("includes/nav");
 
 ?>
 
 
 
-<h1 class="text-center"><i class="fa fa-plus"></i> Home page</h1>
 
 
 
