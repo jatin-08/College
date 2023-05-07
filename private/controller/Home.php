@@ -7,7 +7,10 @@ class Home extends Controller
 {
     public function index()
     {
-        $this->view("home");
+        $user = $this->load_model("User");
+        $data = $user->findAll();
+        // $data = ($db->query("select * from users"));
+        $this->view("home", ["rows" => $data]);
     }
 }
 

@@ -1,5 +1,15 @@
 <?php
 
+// Define database 
+
+define("DBDRIVER", "mysql");
+define("DBNAME", "college_db");
+define("DBHOST", "localhost");
+define("DBUSER", "root");
+define("DBPASS", "");
+
+
+
 ////////////////////////////////////
 
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
