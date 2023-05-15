@@ -9,16 +9,6 @@ $this->view("includes/nav");
 
 
 
-<?php
-
-echo "<pre>";
-
-print_r($rows);
-
-
-?>
-
-
 
 
 <?php

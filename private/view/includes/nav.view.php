@@ -24,9 +24,11 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="<?= BASE ?>tests">TESTS</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-dark dropdown-toggle" href="<?= BASE?>user" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link text-dark dropdown-toggle" href="<?= BASE ?>user" id="navbarDropdownMenuLink"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         USER
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

@@ -7,7 +7,7 @@ class Controller
 {
     public function view($view, $data = [])
     {
-        extract($data); 
+        extract($data);
 
         if (file_exists(VIEW . $view . ".view.php")) {
             require(VIEW . $view . ".view.php");
@@ -24,6 +24,12 @@ class Controller
         }
         return false;
     }
+
+    public function redirect($link)
+   {
+      header("Location: " . BASE . trim($link, "/"));
+      die();
+   }
 }
 
 
