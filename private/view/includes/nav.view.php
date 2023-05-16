@@ -1,5 +1,6 @@
 <!-- NAVBAR SECTION START -->
 
+
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-item-center logoIcon" href="<?= BASE ?>">
@@ -29,8 +30,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="<?= BASE ?>user" id="navbarDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        USER
+                        <?=Auth::user()?>USER
                     </a>
+
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="<?= BASE ?>profile">Pofile</a></li>
                         <li><a class="dropdown-item" href="#">Dashboard</a></li>

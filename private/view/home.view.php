@@ -5,8 +5,9 @@
 $this->view("includes/header");
 $this->view("includes/nav");
 
-?>
+// print_r($errors);
 
+?>
 
 
 

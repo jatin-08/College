@@ -3,6 +3,9 @@
 <?php
 
 $this->view("includes/header");
+$this->view("includes/nav");
+
+// print_r($errors);
 
 ?>
 
@@ -24,18 +27,28 @@ $this->view("includes/header");
                     <div class="col-md-6 pt-3">
                         <h4 class="card-header border-0 bg-white text-center">Sign Up
                         </h4>
+                        <?php if (count($errors) > 0): ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Errors: </strong>
+                                <?php foreach ($errors as $errors): ?>
+                                    <br>
+                                    <?= $errors ?>
+                                <?php endforeach; ?>
+                                <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
+                            </div>
+                        <?php endif; ?>
                         <div class="card-body">
                             <form action="#" autocomplete="off" method="post">
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control"
-                                        placeholder="abcd123@gmail.com">
+                                    <input type="email" value="<?= get_var('email') ?>" name="email"
+                                        class="form-control" placeholder="abcd123@gmail.com">
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control"
-                                        placeholder="At least 6 characters">
+                                    <input type="password" value="<?= get_var('password') ?>" name="password"
+                                        class="form-control" placeholder="At least 6 characters">
                                 </div>
 
                                 <div class="mb-3">
