@@ -8,7 +8,7 @@ class Auth
     public static function authenticate($row)
     {
 
-        $_SESSION['USER'] = '$row';
+        $_SESSION['USER'] = $row;
     }
     public static function logout()
     {
@@ -25,11 +25,11 @@ class Auth
         return false;
     }
 
-    public static function user()
+    public static function user($user)
     {
 
-        if (isset($_SESSION['USER']) && is_object($_SESSION['USER'])) {
-            return $_SESSION['USER']->firstname;
+        if (isset($_SESSION['USER'])) {
+            return $_SESSION['USER']->$user;
         }
         return false;
     }

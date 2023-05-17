@@ -30,7 +30,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="<?= BASE ?>user" id="navbarDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?=Auth::user()?>USER
+                        <?=Auth::user('firstname')?>
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
