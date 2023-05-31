@@ -17,10 +17,16 @@
                     <a class="nav-link text-dark" aria-current="page" href="<?= BASE ?>">DASHBOARD</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" aria-current="page" href="<?= BASE ?>users">USERS</a>
+                    <a class="nav-link text-dark" aria-current="page" href="<?= BASE ?>schools">SCHOOLS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?= BASE ?>classes">CLASSES</a>
+                    <a class="nav-link text-dark" href="<?= BASE ?>staff">STAFF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" aria-current="page" href="<?= BASE ?>student">STUDENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" aria-current="page" href="<?= BASE ?>classes">CLASSES</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="<?= BASE ?>tests">TESTS</a>
@@ -30,7 +36,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="<?= BASE ?>user" id="navbarDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?=Auth::user('firstname')?>
+                        <?= Auth::user('firstname') ?>
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -39,7 +45,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?= BASE ?>logout">Logout</a></li>
                     </ul>
                 </li>
             </ul>

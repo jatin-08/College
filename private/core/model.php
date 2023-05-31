@@ -18,10 +18,9 @@ class Model extends Database
     // Query for the where condition
     public function where($column, $value)
     {
-        $query = "select * from $this->table where $column = :value";
-        return $this->query($query, [
-            'value' => $value
-        ]);
+        $column = addslashes($column);
+        $query = "SELECT * FROM $this->table WHERE $column = :value";
+        return $this->query($query, ['value' => $value]);
     }
 
 
